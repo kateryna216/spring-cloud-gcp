@@ -70,7 +70,9 @@ jobs:
           --batch-mode \
           --fail-at-end \
           --threads 1.5C \
-          -pl spring-cloud-gcp-pubsub test -Dtest=com.google.cloud.spring.pubsub.core.PubSubTemplateTests#testPublish_Object
+          -pl spring-cloud-gcp-pubsub \
+          edu.illinois:nondex-maven-plugin:1.1.2:nondex \
+          -Dtest=com.google.cloud.spring.pubsub.core.PubSubTemplateTests#testPublish_Object
 
     - name: Aggregate Report
       run: |
