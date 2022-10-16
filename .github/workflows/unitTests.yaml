@@ -70,7 +70,7 @@ jobs:
           --batch-mode \
           --fail-at-end \
           --threads 1.5C \
-          test
+          -pl spring-cloud-gcp-pubsub test -Dtest=com.google.cloud.spring.pubsub.core.PubSubTemplateTests#testPublish_Object
 
     - name: Aggregate Report
       run: |
